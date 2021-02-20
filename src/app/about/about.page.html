@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            About
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-button (click)="BackToHome()">back</ion-button>
+    <ion-card>
+        <ion-card-header>Contact</ion-card-header>
+        <ion-card-content>
+            <p>Name : <span>{{contact.name}}</span></p>
+        </ion-card-content>
+    </ion-card>
+    <p>ici about</p>
+
+
+</ion-content>
