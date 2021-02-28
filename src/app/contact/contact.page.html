@@ -1,0 +1,29 @@
+<ion-content [fullscreen]="true" class="container">
+
+    <div class="item">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title class="text-center">Contact</ion-title>
+    </div>
+
+    <ion-card class="contenu">
+
+        <ion-card-content>
+            <div> <img src="../assets/images/EPI_Sousse.png"></div>
+            <div class="form">
+                <ion-icon name="mail-outline"></ion-icon>&nbsp; <span>{{contact.email}}</span>
+            </div>
+            <div class="form">
+                <ion-icon name="time-outline"></ion-icon>&nbsp; <span>{{contact.hours}}</span>
+            </div>
+            <div class="form">
+                <ion-icon name="call-outline"></ion-icon>&nbsp; <span>{{contact.phone}}</span>
+            </div>
+            <div class="form">
+                <ion-icon name="location-outline"></ion-icon>&nbsp; <span>{{contact.location}}</span>
+            </div>
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>

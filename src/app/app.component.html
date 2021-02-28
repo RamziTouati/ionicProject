@@ -1,32 +1,40 @@
 <ion-app>
-
     <ion-menu content-id="menu" id="slidebar">
         <ion-content class="ios hydrated" style="--offset-top:0px; --offset-bottom:0px;">
             <ion-list class="ios list-ios hydrated">
                 <a href="/home">
                     <ion-item class="item ios in-list ion-focusable hydrated item-label">
+                        <img src="../assets/images/EPI_Sousse.png">
+                    </ion-item>
+                </a>
+                <a href="/home">
+                    <ion-item class="item ios in-list ion-focusable hydrated item-label">
                         <ion-icon name="home" slot="start" role="img" class="ios hydrated" aria-label="home"></ion-icon>
-                        <ion-label class="sc-ion-label-ios-h sc-ion-label-ios-s ios hydrated">Home</ion-label>
+                        <ion-label class="sc-ion-label-ios-h sc-ion-label-ios-s ios hydrated txt">Home</ion-label>
                     </ion-item>
                 </a>
                 <a href="/about">
                     <ion-item class="item ios in-list ion-focusable hydrated item-label">
                         <ion-icon name="information" slot="start" role="img" class="ios hydrated" aria-label="information"></ion-icon>
-                        <ion-label class="sc-ion-label-ios-h sc-ion-label-ios-s ios hydrated">About</ion-label>
+                        <ion-label class="sc-ion-label-ios-h sc-ion-label-ios-s ios hydrated txt">About</ion-label>
                     </ion-item>
                 </a>
                 <ion-item class="item ios in-list ion-focusable hydrated item-label">
                     <ion-icon name="heart" slot="start" role="img" class="ios hydrated" aria-label="heart"></ion-icon>
-                    <ion-label class="sc-ion-label-ios-h sc-ion-label-ios-s ios hydrated">Favorites</ion-label>
+                    <ion-label class="sc-ion-label-ios-h sc-ion-label-ios-s ios hydrated txt">Favorites</ion-label>
                 </ion-item>
-                <ion-item class="item ios in-list ion-focusable hydrated item-label">
-                    <ion-icon name="archive" slot="start" role="img" class="ios hydrated" aria-label="archive"></ion-icon>
-                    <ion-label class="sc-ion-label-ios-h sc-ion-label-ios-s ios hydrated">Archived</ion-label>
-                </ion-item>
-                <ion-item class="item ios in-list ion-focusable hydrated item-label">
-                    <ion-icon name="mail" slot="start" role="img" class="ios hydrated" aria-label="mail"></ion-icon>
-                    <ion-label class="sc-ion-label-ios-h sc-ion-label-ios-s ios hydrated">Contact</ion-label>
-                </ion-item>
+                <a href="/article">
+                    <ion-item class="item ios in-list ion-focusable hydrated item-label">
+                        <ion-icon name="archive" slot="start" role="img" class="ios hydrated" aria-label="archive"></ion-icon>
+                        <ion-label class="sc-ion-label-ios-h sc-ion-label-ios-s ios hydrated txt">Articles</ion-label>
+                    </ion-item>
+                </a>
+                <a href="/contact">
+                    <ion-item class="item ios in-list ion-focusable hydrated item-label">
+                        <ion-icon name="mail" slot="start" role="img" class="ios hydrated" aria-label="mail"></ion-icon>
+                        <ion-label class="sc-ion-label-ios-h sc-ion-label-ios-s ios hydrated txt">Contact</ion-label>
+                    </ion-item>
+                </a>
             </ion-list>
         </ion-content>
     </ion-menu>

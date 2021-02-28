@@ -1,0 +1,42 @@
+<ion-content>
+    <div class="item">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title class="text-center">Article</ion-title>
+    </div>
+    <ion-card class="contenu">
+        <ion-card-header class="text-center">
+
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <h1>Articles</h1>
+                        <h2>4</h2>
+                    </ion-col>
+                    <ion-col>
+
+                        <button type="button" class="btn btn-success">NEW Article</button>
+                    </ion-col>
+                </ion-row>
+
+            </ion-grid>
+
+        </ion-card-header>
+
+        <ion-card-content>
+            <ion-grid *ngFor="let item of articles">
+                <a [routerLink]="['/','detail-article', item.id]">
+                    <ion-row class="rowContent ">
+                        <ion-col>
+                            <img src="{{item.photo}} " style="height: 70px; ">
+                        </ion-col>
+                        <ion-col>
+                            <h1> {{item.titre}} </h1>
+                        </ion-col>
+                    </ion-row>
+                </a>
+            </ion-grid>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
