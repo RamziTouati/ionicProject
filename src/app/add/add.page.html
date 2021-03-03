@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-icon name="arrow-back" (click)="BackToArticle()"></ion-icon>
+      </ion-buttons>
+      <ion-title>
+          New article
+      </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="contenu">
+  <form class="row g-3 needs-validation" novalidate [formGroup]="add">
+    <div class="col-md-4">
+      <label for="validationCustom01" class="form-label">Username</label>
+      <input type="text" class="form-control" id="validationCustom01" required formControlName="name">
+      <small *ngIf="add.get('name').hasError('required')" id="validationCustom01" class="text-danger">Is required </small>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustom02" class="form-label">Email</label>
+      <input type="email" class="form-control" id="validationCustom02" required formControlName="email">
+      <div  id="validationServerUsernameFeedback" class="invalid-feedback">
+        Please enter a email or check email.
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustomUsername" class="form-label">Country</label>
+      <div class="input-group has-validation">
+        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required formControlName="country">
+        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+          Please enter a country.
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <button class="btn btn-primary" (click)="onAdd()" type="submit">Submit form</button>
+    </div>
+  </form>
+</ion-card>
+</ion-content>

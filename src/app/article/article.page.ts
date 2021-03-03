@@ -9,9 +9,13 @@ import { NavController } from '@ionic/angular';
 export class ArticlePage implements OnInit {
 
   constructor(public navCtrl: NavController) {}
- 
 
-  goToDetail(id){ 
+
+  addArticle(){
+    this.navCtrl.navigateForward("/add");
+  }
+
+  goToDetail(id){
     this.navCtrl.navigateForward("/details/"+id);
   }
 
