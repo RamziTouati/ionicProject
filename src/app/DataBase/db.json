@@ -1,0 +1,34 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "name": "Will Smith",
+      "category": "catone",
+      "prix": "201"
+    },
+    {
+      "id": 2,
+      "name": "Jackline Joy",
+      "category": "catTwo",
+      "prix": "554"
+    },
+    {
+      "id": 3,
+      "name": "Alu Arjun",
+      "category": "catthree",
+      "prix": "866"
+    },
+    {
+      "id": 4,
+      "name": "Kavitha Kumar",
+      "category": "catFour",
+      "prix": "700"
+    },
+    {
+      "name": "articlenew",
+      "category": "test cat",
+      "prix": "5542",
+      "id": 5
+    }
+  ]
+}

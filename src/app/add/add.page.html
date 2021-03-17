@@ -13,7 +13,7 @@
     <ion-card class="contenu">
         <form class="row g-3 needs-validation" novalidate [formGroup]="add">
             <div class="col-12">
-                <label for="validationCustom01" class="form-label">Username</label>
+                <label for="validationCustom01" class="form-label">Name article</label>
                 <input type="text" class="form-control w-100" id="validationCustom01" required formControlName="name">
                 <small *ngIf="add.get('name').hasError('required')" class="text-danger">Is required </small>
                 <small *ngIf="add.get('name').hasError('minlength')" class="text-danger">The minimum length for the field is 3 characters</small>
@@ -21,16 +21,15 @@
 
             </div>
             <div class="col-12">
-                <label for="validationCustom02" class="form-label">Email</label>
-                <input type="email" class="form-control w-100" id="validationCustom02" required formControlName="email">
-                <small *ngIf="add.get('email').hasError('required')" class="text-danger">Is required </small>
-                <small *ngIf="add.get('email').hasError('email')" class="text-danger">please check your email</small>
+                <label for="validationCustom02" class="form-label">Category</label>
+                <input type="text" class="form-control w-100" id="validationCustom02" required formControlName="category">
+                <small *ngIf="add.get('category').hasError('required')" class="text-danger">Is required </small>
             </div>
             <div class="col-12">
-                <label for="validationCustomUsername" class="form-label">Country</label>
+                <label for="validationCustomUsername" class="form-label">Prix</label>
                 <div class="input-group has-validation">
-                    <input type="text" class="form-control w-100" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required formControlName="country">
-                    <small *ngIf="add.get('country').hasError('required')" id="validationCustom01" class="text-danger">Is required </small>
+                    <input type="text" class="form-control w-100" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required formControlName="prix">
+                    <small *ngIf="add.get('prix').hasError('required')" id="validationCustom01" class="text-danger">Is required </small>
                 </div>
             </div>
             <div class="col-12">

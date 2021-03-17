@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NavController } from '@ionic/angular';
+import { ArticlesService } from '../services/articles.service';
 
 
 @Component({
@@ -10,18 +11,24 @@ import { NavController } from '@ionic/angular';
 })
 export class AddPage implements OnInit {
   public add:FormGroup;
-  constructor(public formbuilder: FormBuilder, public navCtrl: NavController) {
+  constructor(public formbuilder: FormBuilder, public navCtrl: NavController, public articleServive: ArticlesService) {
     this.add = formbuilder.group({
       name:["",[Validators.required,Validators.minLength(3), Validators.maxLength(10) ]],
-      email:["",[Validators.required, Validators.email]],
-      country:["",[Validators.required]],
+      category:["",[Validators.required]],
+      prix:["",[Validators.required]],
     })
    }
 
 
   onAdd(){
-    console.log(this.add.value);
+    const data= this.add.value;
+    this.articleServive.createArticle(data).subscribe((response)=>{
+      console.log(response);
+      this.navCtrl.pop();
+      
+    }
 
+    )
   }
 
   BackToArticle(){
