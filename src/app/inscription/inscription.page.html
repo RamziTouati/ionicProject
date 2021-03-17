@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-icon name="arrow-back" (click)="BackToArticle()"></ion-icon>
+        </ion-buttons>
+        <ion-title>
+            Inscription
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="contenu">
+        <form class="row g-3 needs-validation" novalidate [formGroup]="inscrit">
+            <div class="col-12">
+                <label for="validationCustom01" class="form-label">Full name</label>
+                <input type="text" class="form-control w-100" id="validationCustom01" required formControlName="fullname">
+                <small *ngIf="inscrit.get('fullname').hasError('required')" class="text-danger">Is required </small>
+                <small *ngIf="inscrit.get('fullname').hasError('minlength')" class="text-danger">The minimum length for the field is 8 characters</small>
+            </div>
+            <div class="col-12">
+                <label for="validationCustom02" class="form-label">Email</label>
+                <input type="email" class="form-control w-100" id="validationCustom02" required formControlName="email">
+                <small *ngIf="inscrit.get('email').hasError('required')" class="text-danger">Is required </small>
+                <small *ngIf="inscrit.get('email').hasError('email')" class="text-danger">check email</small>
+            </div>
+            <div class="col-12">
+                <label for="validationCustomUsername" class="form-label">Age</label>
+                <div class="input-group has-validation">
+                    <input type="number" min="1" max="99" class="form-control w-100" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required formControlName="age">
+                    <small *ngIf="inscrit.get('age').hasError('required')" id="validationCustom01" class="text-danger">Is required </small>
+                    <small *ngIf="inscrit.get('age').hasError('min')" id="validationCustom01" class="text-danger"> age minimum 1 </small>
+                    <small *ngIf="inscrit.get('age').hasError('max')" id="validationCustom01" class="text-danger">age maximum 99 </small>
+                </div>
+            </div>
+            <div class="col-12">
+                <label for="validationCustomUsername" class="form-label">Password</label>
+                <div class="input-group has-validation">
+                    <input type="password" class="form-control w-100" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required formControlName="password">
+                    <small *ngIf="inscrit.get('password').hasError('required')" id="validationCustom01" class="text-danger">Is required </small>
+                    <small *ngIf="inscrit.get('password').hasError('maxlength')" class="text-danger">The maximem length for the field is 15 characters</small>
+                    <small *ngIf="inscrit.get('password').hasError('minlength')" class="text-danger">The maximem length for the field is 5 characters</small>
+                </div>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary " (click)="oninscrit()" type="submit">Submit form</button>
+            </div>
+        </form>
+    </ion-card>
+</ion-content>
