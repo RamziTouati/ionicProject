@@ -10,25 +10,21 @@
             <ion-grid>
                 <ion-row>
                     <ion-col>
-                        <h1>Articles</h1>
-                        <h2>4</h2>
-                    </ion-col>
-                    <ion-col style="margin: auto;">
-                        <button (click)="addArticle()" class="btn btn-success"><ion-icon name="add-circle"></ion-icon></button>
+                        <button (click)="addArticle()" class="btn btn-success"><ion-icon name="add-circle"></ion-icon>new article</button>
+                        <h1>List articles</h1>
                     </ion-col>
                 </ion-row>
             </ion-grid>
         </ion-card-header>
         <ion-card-content>
             <ion-grid *ngFor="let item of articles">
-                <a [routerLink]="['/','detail-article', item.id]">
+                <a [routerLink]="['/','detail-article', item]">
                     <ion-row class="rowContent">
-                        <ion-col>
-                            <img src="{{item.photo}} " style="height: 70px; ">
-                        </ion-col>
                         <ion-col style="margin: auto;">
-                            <h1> {{item.titre}} </h1>
+                            <h1> {{item.name}} </h1>
+                            <h1> {{item.title}} </h1>
                         </ion-col>
+
                     </ion-row>
                 </a>
             </ion-grid>

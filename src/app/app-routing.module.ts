@@ -24,13 +24,14 @@ const routes: Routes = [
     loadChildren: () => import('./article/article.module').then( m => m.ArticlePageModule)
   },
   {
-    path: 'detail-article/:id',
+    path: 'detail-article',
     loadChildren: () => import('./detail-article/detail-article.module').then( m => m.DetailArticlePageModule)
   },
   {
     path: 'contact',
     loadChildren: () => import('./contact/contact.module').then( m => m.ContactPageModule)
-  },  {
+  },
+  {
     path: 'add',
     loadChildren: () => import('./add/add.module').then( m => m.AddPageModule)
   },

@@ -7,12 +7,13 @@ const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
 
-const apiUrl = "https://randomuser.me/api/?results=5";
+const apiUrl = "http://localhost:3000/posts";
 
 @Injectable({
   providedIn: 'root'
 })
-export class ApiService {
+export class PostsapiService {
+
 
   constructor(private http: HttpClient) { }
 
@@ -32,7 +33,7 @@ export class ApiService {
     return body || { };
   }
 
-  getDataUser(): Observable<any> {
+  getDataPost(): Observable<any> {
     return this.http.get(apiUrl, httpOptions).pipe(
       map(this.extractData),
       catchError(this.handleError));

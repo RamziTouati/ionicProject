@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { NavController, NavParams } from '@ionic/angular';
 
 @Component({
   selector: 'app-detail-article',
@@ -8,7 +8,11 @@ import { NavController } from '@ionic/angular';
 })
 export class DetailArticlePage implements OnInit {
 
-  constructor(public navCtrl: NavController) {}
+  constructor(public navCtrl: NavController, 
+    // public navParams: NavParams
+    ) {
+    // console.log(navParams.get('sss'));  
+  }
   BackToArticle(){
     this.navCtrl.navigateForward("/article")
   }

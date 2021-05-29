@@ -1,0 +1,37 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "name": "dddddd",
+      "category": "json",
+      "prix": "5542",
+      "id": 2
+    },
+    {
+      "name": "second article",
+      "category": "catg 2",
+      "prix": "200",
+      "id": 3
+    },
+    {
+      "name": "test",
+      "category": "cat de test",
+      "prix": "558",
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

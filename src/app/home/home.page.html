@@ -4,14 +4,35 @@
             <ion-menu-button></ion-menu-button>
         </ion-buttons>
         <ion-title>
-            Users
+            Home
         </ion-title>
     </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+    <h2>list programs</h2>
+    <table class="table">
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Session web</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Session mobile</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Session design</td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>Session test et performance</td>
+            </tr>
+        </tbody>
+    </table>
 
-
+    <h2>list Users</h2>
     <ion-grid *ngFor="let d of data">
         <ion-row>
             <ion-col>
@@ -20,7 +41,6 @@
                 <p>{{d.gender}}</p>
             </ion-col>
         </ion-row>
-
     </ion-grid>
 
 

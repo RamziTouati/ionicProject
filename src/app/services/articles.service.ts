@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class ArticlesService {
 
-  base_path = 'http://localhost:3000/articles'
+  base_path = 'http://localhost:3000/posts'
 
   constructor(private http: HttpClient) { }
 

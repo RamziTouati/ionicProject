@@ -13,7 +13,7 @@ export class AddPage implements OnInit {
   public add:FormGroup;
   constructor(public formbuilder: FormBuilder, public navCtrl: NavController, public articleServive: ArticlesService) {
     this.add = formbuilder.group({
-      name:["",[Validators.required,Validators.minLength(3), Validators.maxLength(10) ]],
+      name:["",[Validators.required,Validators.minLength(3), Validators.maxLength(10)]],
       category:["",[Validators.required]],
       prix:["",[Validators.required]],
     })
@@ -25,7 +25,6 @@ export class AddPage implements OnInit {
     this.articleServive.createArticle(data).subscribe((response)=>{
       console.log(response);
       this.navCtrl.pop();
-      
     }
 
     )
